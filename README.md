@@ -1,7 +1,8 @@
+# FORKED FROM
+
+[Initial structure with TypeORM and Express](https://github.com/andregardi/jwt-express-typeorm)
 
 # Creating a Rest API with JWT authentication and role based authorization using TypeScript…
-
-
 
 Today, we are going to use TypeScript Express.js and TypeORM to create an enterprise level Rest API with JWT authentication and role based authorization. The objective is to create a repository that you can use as bases for your real life projects.
 
@@ -70,16 +71,16 @@ The ORM we are going to use to manipulate database
 **reflect-metadata**
 allow some annotations features used with TypeORM
 
-**class-validator** 
+**class-validator**
 A validation package that works really well with TypeORM
 
-**sqlite3** 
+**sqlite3**
 We are going to use sqlite as dev database
 
 **ts-node-dev**
 Automatically restarts the server when we change any file
 
-### Installing type check dependencies 
+### Installing type check dependencies
 
 Since we are working with TypeScript, it is a good idea to install @types for our dependencies.
 
@@ -121,7 +122,7 @@ To access the login route, for example, you will call:
 
 ### Middleware
 
-As you can see, the routes call  some middlewares before calling the controller. A middleware is really just a function that manipulates your request and call the next middleware. The best way to understand is to create your first middleware.
+As you can see, the routes call some middlewares before calling the controller. A middleware is really just a function that manipulates your request and call the next middleware. The best way to understand is to create your first middleware.
 
 **middlewares/checkJwt.ts
 **This middleware will be called on every route that requires a logged user. It will check if we have a valid JWT on the request header. If the token is valid, it will call the next function that will be handled by the controller. Otherwise, it will send a response with the 401 (unauthorized) status code.
@@ -176,7 +177,7 @@ The Node.js itself can’t run, natively, .tsfiles. For that reason is important
 "ts-node" — allows node to run .ts projects. Not recommended for production uses.
 "ts-node-dev" — same as above, but allows you restart the node server every time you change a file
 
-To better setup development and production environments, we will modify the script session of the package.json. 
+To better setup development and production environments, we will modify the script session of the package.json.
 
 <iframe src="https://medium.com/media/5c66379601b23108065e13e7a21c0414" frameborder=0></iframe>
 
@@ -208,5 +209,3 @@ Finally, your server is ready to go. Just get the Postman, or any other tool, an
 The final repository can be found on GitHub:
 [**andregardi/jwt-express-typeorm**
 *Rest API with JWT authentication and role based authorization using TypeScript Express.js and TypeORM …*github.com](https://github.com/andregardi/jwt-express-typeorm)
-
-
